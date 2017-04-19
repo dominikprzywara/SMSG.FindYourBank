@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMSG.FindYourBank.Data.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,12 @@ namespace SMSG.FindYourBank.WindowsUWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public MainViewModel ViewModel { get; }
+
         public MainPage()
         {
             this.InitializeComponent();
+            ViewModel = new MainViewModel();
         }
     }
 }

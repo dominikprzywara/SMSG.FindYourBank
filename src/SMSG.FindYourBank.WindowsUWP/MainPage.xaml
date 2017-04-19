@@ -7,7 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock 
+            Text="{x:Bind ViewModel.BankName, Mode=TwoWay}" />
+        <TextBox
+            Text="{x:Bind ViewModel.AccountNumber, Mode=TwoWay}"
+            PlaceholderText="{x:Bind ViewModel.Hint}"/>
+        <Button
+            Content="{x:Bind ViewModel.ButtonTitle}"
+            Click="{x:Bind ViewModel.Find}" />
+    </StackPanel>
 </Page>

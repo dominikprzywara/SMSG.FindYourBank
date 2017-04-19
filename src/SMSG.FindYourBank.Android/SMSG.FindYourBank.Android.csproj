@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>b1d0858f-1e65-4d48-a54a-c952f190af08</ProjectGuid>
+    <ProjectGuid>{B1D0858F-1E65-4D48-A54A-C952F190AF08}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>SMSG.FindYourBank.Droid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -44,8 +44,9 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SMSG.FindYourBank\SMSG.FindYourBank.csproj">
-      <Name>SMSG.FindYourBank</Name>
+    <ProjectReference Include="..\SMSG.FindYourBank.Data\SMSG.FindYourBank.Data.csproj">
+      <Project>{E23DB4A7-D482-4F75-9560-CFCFDB128B46}</Project>
+      <Name>SMSG.FindYourBank.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

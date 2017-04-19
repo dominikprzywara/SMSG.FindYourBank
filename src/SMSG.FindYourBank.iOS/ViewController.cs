@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMSG.FindYourBank.Data.ViewModels;
+using System;
 
 using UIKit;
 
@@ -6,8 +7,6 @@ namespace SMSG.FindYourBank.iOS
 {
 	public partial class ViewController : UIViewController
 	{
-		int count = 1;
-
 		public ViewController (IntPtr handle) : base (handle)
 		{
 		}
@@ -15,18 +14,15 @@ namespace SMSG.FindYourBank.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			// Perform any additional setup after loading the view, typically from a nib.
-			Button.AccessibilityIdentifier = "myButton";
-			Button.TouchUpInside += delegate {
-				var title = string.Format ("{0} clicks!", count++);
-				Button.SetTitle (title, UIControlState.Normal);
-			};
-		}
+            var viewModel = new MainViewModel();
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			base.DidReceiveMemoryWarning ();
-			// Release any cached data, images, etc that aren't in use.
+            // Perform any additional setup after loading the view, typically from a nib.
+            Button.SetTitle(viewModel.ButtonTitle, UIControlState.Normal);
+            Button.TouchUpInside += (s, e) => viewModel.Find();
+
+            viewModel.PropertyChanged += (s, e) => Label.Text = viewModel.BankName;
+            TextBox.EditingChanged += (s, e) => viewModel.AccountNumber = TextBox.Text;
+            TextBox.Placeholder = viewModel.Hint;
 		}
 	}
 }

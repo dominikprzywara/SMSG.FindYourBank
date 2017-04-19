@@ -4,11 +4,18 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<Button  
+  <TextView
+    android:id="@+id/myTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"/>
+  <EditText
+    android:id="@+id/myEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+  <Button  
     android:id="@+id/myButton"
     android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+    android:layout_height="wrap_content" />
 </LinearLayout>
 

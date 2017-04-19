@@ -34,11 +34,22 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Logic\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\BankNameResolver.cs" />
+    <Compile Include="Logic\IBankNameResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMSG.FindYourBank.Model\SMSG.FindYourBank.Model.csproj">
+      <Project>{9B9B7BC6-7744-4F02-91BB-445AC970EBEB}</Project>
+      <Name>SMSG.FindYourBank.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMSG.FindYourBank.Service\SMSG.FindYourBank.Service.csproj">
+      <Project>{E022E0DB-261D-4CBD-9AFC-A9FE22576710}</Project>
+      <Name>SMSG.FindYourBank.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
