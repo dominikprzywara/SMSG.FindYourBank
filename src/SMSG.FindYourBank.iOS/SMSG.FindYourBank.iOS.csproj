@@ -19,11 +19,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>True</MtouchDebug>
     <MtouchProfiling>True</MtouchProfiling>
-    <MtouchSdkVersion>10.2</MtouchSdkVersion>
+    <MtouchSdkVersion>11.1</MtouchSdkVersion>
     <MtouchFastDev>False</MtouchFastDev>
     <MtouchNoSymbolStrip>False</MtouchNoSymbolStrip>
     <MtouchUseLlvm>False</MtouchUseLlvm>
